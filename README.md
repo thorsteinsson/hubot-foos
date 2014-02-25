@@ -16,11 +16,11 @@ You can use ```hubot help``` to see list of commands.
  - foos show - Show players.
  - foos table - Show a picture of the foosball table. You need to set HUBOT_FOOS_TABLE environment variable with a url to your webcam output.
  
- ## TODO
+## TODO
  
-  - Add someone else
-  - Remove someone else
-  - Clear table after a few hours
-  - Track score, ask each player for how many wins they had in a private message
-  - Leaderboard
-  - Stream images of the foosball table until the table is available
+ - Add someone else
+ - Remove someone else
+ - Clear table after a few hours
+ - Track score, ask each player for how many wins they had in a private message
+ - Leaderboard
+ - Stream images of the foosball table until the table is available
