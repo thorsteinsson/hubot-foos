@@ -4,7 +4,7 @@ This is a plugin for [Hubot](http://hubot.github.com/) to let users gather for a
 
 ## Installation
 
-Install using ```npm install hubot-foos``` and add 'hubot-foos' to the external-scripts.json file.
+Install using ```npm install hubot-foos``` and add ```"hubot-foos"``` to the array in the external-scripts.json file.
 
 ## Commands
 
