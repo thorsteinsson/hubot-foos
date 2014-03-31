@@ -3,6 +3,7 @@
 #
 # Commands:
 #   foos me - Add a player.
+#   foos @nick - Add @nick as a player.
 #   foos remove - Remove a player.
 #   foos clear - Remove everyone.
 #   foos show - Show players.
@@ -38,17 +39,23 @@ module.exports = (robot) ->
       msg.send 'No foos players.'
     else
       msg.send 'Foos players: ' + players.join(' - ')
-
-  robot.hear /foos\sme/i, (msg) ->
+      
+  addPlayer = (msg, nick) ->
     init msg
     players = robot.brain.data.foos[getRoom(msg)]
-    players.push('@' + msg.message.user.mention_name)
+    players.push(nick)
     showLineup msg
     if players.length == maxLength - 1
       msg.send 'One more player needed!'
     else if players.length == maxLength
       msg.send 'Go go go!'
       robot.brain.data.foos[getRoom(msg)] = []
+
+  robot.hear /foos\sme/i, (msg) ->
+    addPlayer(msg, '@' + msg.message.user.mention_name)
+      
+  robot.hear/foos\s(@.*)/i, (msg) ->
+    addPlayer(msg, msg.match[1])
 
   robot.hear /foos\sremove/i, (msg) ->
     init msg
