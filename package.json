@@ -1,7 +1,7 @@
 {
   "name": "hubot-foos",
   "description": "A hubot script for foosball gathering.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "name": "Aegir Thorsteinsson",
     "email": "aegir@thorsteinsson.is"
