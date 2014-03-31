@@ -54,7 +54,7 @@ module.exports = (robot) ->
   robot.hear /foos\sme/i, (msg) ->
     addPlayer(msg, '@' + msg.message.user.mention_name)
       
-  robot.hear/foos\s(@.*)/i, (msg) ->
+  robot.hear /foos\s(@.*)/i, (msg) ->
     addPlayer(msg, msg.match[1])
 
   robot.hear /foos\sremove/i, (msg) ->
